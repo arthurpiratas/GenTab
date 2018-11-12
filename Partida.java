@@ -1,3 +1,4 @@
+package ClasseBasica;
 import java.util.Date;
 
 public class Partida {

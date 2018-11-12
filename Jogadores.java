@@ -1,3 +1,5 @@
+package ClasseBasica;
+
 
 /* Posições
 1- Goleiro
@@ -21,9 +23,12 @@ public class Jogadores {
 	private int gol; 
 	private boolean titular; 
 	private boolean reserva; 
+	private int posicaoAtual;  
+	
+	public static int numRegistro = 0; 
 	
 	
-	public boolean isTitular() {
+	public boolean getTitular() {
 		return titular;
 	}
 
@@ -33,7 +38,7 @@ public class Jogadores {
 	}
 
 
-	public boolean isReserva() {
+	public boolean getReserva() {
 		return reserva;
 	}
 
@@ -50,6 +55,7 @@ public class Jogadores {
 		this.numeroRegistro = 0;
 		this.IdClube = 0;
 		this.posicao = 0;
+		this.posicaoAtual = 0; 
 		this.habilidade = 0;
 		this.numero = 0;
 		this.gol = 0;
@@ -60,7 +66,7 @@ public class Jogadores {
 	
 	
 	Jogadores(String nome, int idade, int numeroRegistro, int idClube, int posicao, int habilidade, int numero,
-			int gol) {
+			int gol, int posicaoAtual) {
 		this.nome = nome;
 		this.idade = idade;
 		this.numeroRegistro = numeroRegistro;
@@ -69,6 +75,7 @@ public class Jogadores {
 		this.habilidade = habilidade;
 		this.numero = numero;
 		this.gol = gol;
+		this.posicaoAtual = posicaoAtual; 
 	}
 	
 	
@@ -121,6 +128,42 @@ public class Jogadores {
 	}
 	public void setGol(int gol) {
 		this.gol = gol;
+	}
+
+
+	public int getPosicaoAtual() {
+		return posicaoAtual;
+	}
+
+
+	public void setPosicaoAtual(int posicaoAtual) {
+		this.posicaoAtual = posicaoAtual;
+	}
+	
+	
+	
+	
+	public double verificaPosicaoJogador() {
+		
+		
+		if(this.posicao == this.posicaoAtual) {
+			return 1; 
+		}else if(this.posicao <= this.posicaoAtual-1) {
+			
+			return 0.3;
+		}else if(this.posicao < this.posicaoAtual) {
+			return 0.2;
+		}else if(this.posicao >= this.posicaoAtual-1) {
+			return 0.2; 
+		}else if(this.posicao > this.posicaoAtual) {
+			return 0.3; 
+		}
+		
+		return 0; 
+	}
+	
+	public void atualizaGols(int gols) {
+		this.gol += gols; 
 	}
 	
 	

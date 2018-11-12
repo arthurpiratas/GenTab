@@ -1,10 +1,13 @@
+package ClasseBasica;
+
 
 public class Clube {
 	
 	private String nome; 
 	private int numeroRegistro; 
 	private Jogadores jogadores[]; 
-	private static final int tamanhoJogador = 22; 
+	private static final int tamanhoJogador = 20; 
+	private int index; 
 	private int contJogador; 
 	private int idCampeonatoAtual;
 	private int pontosCampAtual; 
@@ -204,6 +207,23 @@ public class Clube {
 
 	public static int getTamanhojogador() {
 		return tamanhoJogador;
+	}
+	
+	
+	public void incluiJogador(Jogadores jogador) {
+		jogadores[index] = jogador; 
+		this.index += 1; 
+	}
+	
+	public void listaJogadores(Jogadores jogadores[]) {
+		
+		System.out.println("");
+		for(int a = 0; a<index; a++) {
+			if(jogadores[a].getTitular() == true) {
+				System.out.println("Nome: "+ jogadores[a].getNome() + " Força: "+ jogadores[a].getHabilidade() + " Posição: "+ jogadores[a].getPosicao());
+			}
+			
+		}
 	}
 	
 	
