@@ -1,6 +1,6 @@
 package Repositorio;
 
-import ClasseBasica.Jogadores;
+import Basicas.Jogadores;
 
 public class RepositorioJogadoresArray implements RepositorioJogador{
 	
@@ -8,7 +8,9 @@ public class RepositorioJogadoresArray implements RepositorioJogador{
 	private int index; 
 	private final static int tamanho = 400; 
 	
-	
+	public Jogadores[] getListaJogadores() {
+		return listaJogadores;
+	}
 
 	public RepositorioJogadoresArray() {
 		this.listaJogadores = new Jogadores[tamanho];
@@ -63,11 +65,11 @@ public class RepositorioJogadoresArray implements RepositorioJogador{
 	}
 
 	@Override
-	public void listar(RepositorioJogadoresArray repositorio) {
+	public void listar() {
 		// TODO Auto-generated method stub
 		
 		for(int a=0; a<index; a++) {
-			System.out.println("Nome: "+ listaJogadores[a].getNome());
+			System.out.println("Nome: "+ this.listaJogadores[a].getNome());
 		}
 		
 	}

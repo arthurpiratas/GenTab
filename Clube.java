@@ -1,4 +1,4 @@
-package ClasseBasica;
+package Basicas;
 
 
 public class Clube {
@@ -72,6 +72,16 @@ public class Clube {
 		this.nomeEstadio = "";
 		this.prestigoTorcida = 0;
 		
+	}
+
+
+	public int getIndex() {
+		return index;
+	}
+
+
+	public void setIndex(int index) {
+		this.index = index;
 	}
 
 
@@ -211,20 +221,23 @@ public class Clube {
 	
 	
 	public void incluiJogador(Jogadores jogador) {
-		jogadores[index] = jogador; 
+		jogador.setIdClube(this.numeroRegistro);
+		this.jogadores[index] = jogador; 
 		this.index += 1; 
 	}
 	
-	public void listaJogadores(Jogadores jogadores[]) {
+	public void removeJogador(int numeroRegJogador) {
 		
-		System.out.println("");
 		for(int a = 0; a<index; a++) {
-			if(jogadores[a].getTitular() == true) {
-				System.out.println("Nome: "+ jogadores[a].getNome() + " Força: "+ jogadores[a].getHabilidade() + " Posição: "+ jogadores[a].getPosicao());
+			if(this.jogadores[a].getNumeroRegistro() == numeroRegJogador) {
+				this.jogadores[a].setIdClube(0);
+				this.jogadores[a] = this.jogadores[index-1]; 
+				this.index -=1; 
 			}
-			
 		}
 	}
+	
+	
 	
 	
 	

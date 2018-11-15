@@ -1,5 +1,5 @@
 package Repositorio;
-import ClasseBasica.Jogadores;;
+import Basicas.Jogadores;;
 
 
 public interface RepositorioJogador {
@@ -8,6 +8,6 @@ public interface RepositorioJogador {
 	public void atualizaJogador(Jogadores jogador); 
 	public Jogadores buscaJogador(int numeroregistro); 
 	public void removeJogador(int numeroregistro);
-	public void listar(RepositorioJogadoresArray repositorio); 
+	public void listar(); 
 
 }

@@ -1,4 +1,4 @@
-package ClasseBasica;
+package Basicas;
 
 
 /* Posições
@@ -143,28 +143,7 @@ public class Jogadores {
 	
 	
 	
-	public double verificaPosicaoJogador() {
-		
-		
-		if(this.posicao == this.posicaoAtual) {
-			return 1; 
-		}else if(this.posicao <= this.posicaoAtual-1) {
-			
-			return 0.3;
-		}else if(this.posicao < this.posicaoAtual) {
-			return 0.2;
-		}else if(this.posicao >= this.posicaoAtual-1) {
-			return 0.2; 
-		}else if(this.posicao > this.posicaoAtual) {
-			return 0.3; 
-		}
-		
-		return 0; 
-	}
 	
-	public void atualizaGols(int gols) {
-		this.gol += gols; 
-	}
 	
 	
 

@@ -1,5 +1,5 @@
 package Repositorio;
-import ClasseBasica.Clube;
+import Basicas.Clube;
 
 public class RepositorioClubeArray implements RepositorioClube{
 	
@@ -10,6 +10,11 @@ public class RepositorioClubeArray implements RepositorioClube{
 	public RepositorioClubeArray() {
 		this.listaClubes = new Clube[tamanho]; 
 		this.index = 0; 
+	}
+	
+	
+	public Clube[] getListaClubes() {
+		return listaClubes;
 	}
 
 	@Override
@@ -63,10 +68,10 @@ public class RepositorioClubeArray implements RepositorioClube{
 	}
 
 	@Override
-	public void listar(RepositorioClubeArray repositorio) {
+	public void listar() {
 		// TODO Auto-generated method stub
 		for(int a = 0; a<index; a++) {
-			System.out.println("Nome: "+ listaClubes[a].getNome());
+			System.out.println("Nome: "+ this.listaClubes[a].getNome());
 		}
 		
 		
