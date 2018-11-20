@@ -14,6 +14,7 @@ public class Partida {
 	private double renda; 
 	private int rodada; 
 	private boolean statusPartida;
+	private int partidaID; 
 	
 	public Partida(Clube clubeCasa, Clube clubeFora, Date data, int rodada, boolean statusPartida) {
 		this.clubeCasa = clubeCasa;
@@ -22,6 +23,20 @@ public class Partida {
 		this.rodada = rodada;
 		this.statusPartida = statusPartida;
 	}
+	
+	
+	
+	public int getPartidaID() {
+		return partidaID;
+	}
+
+
+
+	public void setPartidaID(int partidaID) {
+		this.partidaID = partidaID;
+	}
+
+
 
 	public Clube getClubeCasa() {
 		return clubeCasa;
