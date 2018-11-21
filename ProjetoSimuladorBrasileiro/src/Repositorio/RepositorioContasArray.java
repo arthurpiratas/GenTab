@@ -5,7 +5,7 @@ import Basicas.Perfil;
 public class RepositorioContasArray implements RepositorioContas{
 	
 	private Perfil[] perfis;
-	private final static int TAMANHO = 100;
+	public final static int TAMANHO = 100;
 
 	public RepositorioContasArray() {
 		super();

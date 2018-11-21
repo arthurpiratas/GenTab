@@ -5,7 +5,7 @@ public class RepositorioClubeArray implements RepositorioClube{
 	
 	private Clube[] listaClubes;
 	private int index; 
-	private final static int tamanho = 20; 
+	public final static int tamanho = 20; 
 	
 	public RepositorioClubeArray() {
 		this.listaClubes = new Clube[tamanho]; 

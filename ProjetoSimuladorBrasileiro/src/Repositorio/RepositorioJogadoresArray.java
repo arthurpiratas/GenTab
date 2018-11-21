@@ -6,7 +6,7 @@ public class RepositorioJogadoresArray implements RepositorioJogador{
 	
 	private Jogadores[] listaJogadores;
 	private int index; 
-	private final static int tamanho = 400; 
+	public final static int tamanho = 400; 
 	
 	public Jogadores[] getListaJogadores() {
 		return listaJogadores;
@@ -30,7 +30,7 @@ public class RepositorioJogadoresArray implements RepositorioJogador{
 	public void atualizaJogador(Jogadores jogador) {
 		// TODO Auto-generated method stub
 		
-		for(int a=0; a<tamanho; a++) {
+		for(int a=0; a<index; a++) {
 			if(jogador.getNumeroRegistro() == listaJogadores[a].getNumeroRegistro()) {
 				listaJogadores[a] = jogador;
 			}

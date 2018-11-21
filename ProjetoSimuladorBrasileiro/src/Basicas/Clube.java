@@ -6,7 +6,7 @@ public class Clube {
 	private String nome; 
 	private int numeroRegistro; 
 	private Jogadores jogadores[]; 
-	private static final int tamanhoJogador = 20; 
+	public static final int tamanhoJogador = 20; 
 	private int index; 
 	private int contJogador; 
 	private int idCampeonatoAtual;
