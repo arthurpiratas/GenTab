@@ -2,17 +2,17 @@ package Repositorio;
 
 import Basicas.Perfil;
 
-public class RepositorioContasArray implements RepositorioContas{
+public class RepositorioPerfisArray implements RepositorioPerfis{
 	
 	private Perfil[] perfis;
-	public final static int TAMANHO = 100;
+	private final static int TAMANHO = 100;
 
-	public RepositorioContasArray() {
+	public RepositorioPerfisArray() {
 		super();
 		this.perfis = new Perfil[TAMANHO];
 	}
 	@Override
-	public void inserir(Perfil perfil) { //insere na primeira possiÁ„o n„o nula
+	public void inserir(Perfil perfil) { //insere na primeira possi√ß√£o n√£o nula
 		for(int i=0;i<TAMANHO;i++) {
 			if(perfis[i] == null) {
 				perfis[i] = perfil;
@@ -32,7 +32,7 @@ public class RepositorioContasArray implements RepositorioContas{
 		}
 	}
 	@Override
-	public Perfil buscar(int id) { //procura o perfil pelo id e o retorna se achar-lo. retorna nulo caso contr·rio.
+	public Perfil buscar(int id) { //procura o perfil pelo id e o retorna se achar-lo. retorna nulo caso contr√°rio.
 		Perfil perf = null;
 		 for(int i=0;i<TAMANHO;i++) {
 				if(perfis[i] != null) {
@@ -54,10 +54,10 @@ public class RepositorioContasArray implements RepositorioContas{
 		}
 	}
 	@Override
-	public Perfil buscarLoging(String loging) { //procura o perfil pelo loging. Ser· usado pelo Criar() para verificar se o loging ja existe.
+	public Perfil buscarLogin(String login) { //procura o perfil pelo login. Ser√° usado pelo Criar() para verificar se o login ja existe.
 		 for(int i=0;i<TAMANHO;i++) {
 				if(perfis[i] != null) {
-					if(perfis[i].getLoging().equals(loging)) {
+					if(perfis[i].getLogin().equals(login)) {
 						return perfis[i];
 					}
 				}
