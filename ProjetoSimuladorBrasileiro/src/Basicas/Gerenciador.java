@@ -6,17 +6,5 @@ public class Gerenciador extends Perfil{
 			super(nome, id, loging, senha);
 			// TODO Auto-generated constructor stub
 		}
-		//métodos
-		public static void alteraJogador() {
-			
-		}
-		public void alteraClube() {
-			
-		}
-		public void exclueJogador() {
-			
-		}
-		public void exclueCampionato() {
-			
-		}
+	//os metodos foram para a classe ControleGerenciador
 	}
