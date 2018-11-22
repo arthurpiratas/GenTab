@@ -1,10 +1,10 @@
 package Repositorio;
 import Basicas.Perfil;
 
-public interface RepositorioContas {
+public interface RepositorioPerfis {
 	public void inserir(Perfil perfil);
 	public void atualizr(Perfil perfil);
 	public Perfil buscar(int id);
 	public void remover(int id);
-	public Perfil buscarLoging(String loging);
+	public Perfil buscarLogin(String login);
 }
