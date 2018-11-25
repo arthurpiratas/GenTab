@@ -13,7 +13,7 @@ public abstract class Perfil {
 	public Perfil(String nome, int id, String login, String senha) {
 		super();
 		this.nome = nome;
-		this.id = 10000000;//ID zerado, os dois primeiros digitos s√£o para identifica√ß√£o do tido de conta, "10" para gerenciador e "11" para player.
+		this.id = 10000000;//ID zerado, os dois primeiros digitos s„o para identificaÁ„o do tido de conta, "10" para gerenciador e "11" para player.
 		this.login = login;
 		this.senha = senha;
 	}
@@ -42,10 +42,10 @@ public abstract class Perfil {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	//m√©todos
+	//mÈtodos
 	public void criar(String nome, String loging, String senha, String confirmarSenha, int tipoDePerfil) {
 		Perfil perf = null;
-		//verificando se o login j√° exixite.
+		//verificando se o login j· exixite.
 		RepositorioPerfisArray rca = new RepositorioPerfisArray();
 		if(rca.buscarLogin(login) == null) {
 			//verificando senha
@@ -54,9 +54,9 @@ public abstract class Perfil {
 					//atribundo id da conta
 					char[] Id = new char[8];
 					for(int i=0; i<8; i++) {
-						Id[i] = Integer.toString(this.id).charAt(i);//passando de inteiros para um vetor de char para melhor manipula√ß√£o dos digitos
+						Id[i] = Integer.toString(this.id).charAt(i);//passando de inteiros para um vetor de char para melhor manipulaÁ„o dos digitos
 					}
-					if(tipoDePerfil == 0) {//verificando se a conta a ser criada ser√° gerenciador ou player.
+					if(tipoDePerfil == 0) {//verificando se a conta a ser criada ser· gerenciador ou player.
 						Id[1] = '0';
 						Perfil perfil = new Gerenciador(nome, this.id, loging, confirmarSenha);
 						perf = perfil;
@@ -77,7 +77,7 @@ public abstract class Perfil {
 	}
 	public void alterarConta(String novoNome, String novoLogin, String novaSenha, String confirmarNovaSenha, int novoTipoDePerfil) {
 		Perfil perf = null;
-		//verificando se o login j√° exixite.
+		//verificando se o login j· exixite.
 		RepositorioPerfisArray rca = new RepositorioPerfisArray();
 		if(rca.buscarLogin(novoLogin) == null) {
 			//verificando senha
@@ -86,9 +86,9 @@ public abstract class Perfil {
 					//atribundo id da conta
 					char[] Id = new char[8];
 					for(int i=0; i<8; i++) {
-						Id[i] = Integer.toString(this.id).charAt(i);//passando de inteiros para um vetor de char para melhor manipula√ß√£o dos digitos
+						Id[i] = Integer.toString(this.id).charAt(i);//passando de inteiros para um vetor de char para melhor manipulaÁ„o dos digitos
 					}
-					if(novoTipoDePerfil == 0) {//verificando se a conta a ser criada ser√° gerenciador ou player.
+					if(novoTipoDePerfil == 0) {//verificando se a conta a ser criada ser· gerenciador ou player.
 						Id[1] = '0';
 						Perfil perfil = new Gerenciador(novoNome, this.id, novoLogin, confirmarNovaSenha);
 						perf = perfil;
@@ -108,7 +108,7 @@ public abstract class Perfil {
 	}
 	public boolean loging(String login, String senha) {
 		boolean resultadoDoLogin = false;
-		//verificando se o login j√° exixite.
+		//verificando se o login j· exixite.
 		RepositorioPerfisArray rca = new RepositorioPerfisArray();
 		if(rca.buscarLogin(login) != null) {//verifica se o login existe
 			//verificando senha

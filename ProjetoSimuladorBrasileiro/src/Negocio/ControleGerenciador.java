@@ -1,5 +1,6 @@
 package Negocio;
 
+import Basicas.Jogadores;
 import Basicas.Perfil;
 import Repositorio.RepositorioPerfis;
 import Repositorio.RepositorioPerfisArray;
@@ -7,8 +8,8 @@ import Repositorio.RepositorioPerfisArray;
 public class ControleGerenciador {
 	
 	private RepositorioPerfis perfis = new RepositorioPerfisArray();
-	private RepositorioJogador jogadores =  new  RepositorioJogadoresArray ();
-	private RepositorioClube clubes = new RepositorioClubeArray();
+	/*private RepositorioJogador jogadores =  new  RepositorioJogadoresArray ();
+	private RepositorioClube clubes = new RepositorioClubeArray();*/
 	
 	//metodos
 	public void inserir(Perfil perfil) {
@@ -24,19 +25,19 @@ public class ControleGerenciador {
 		perfis.remover(id);
 	}
 	//metodos de gerenciador
-	public void alteraJogador(Jogadores  jogador) {
+	/*public void alteraJogador(Jogadores  jogador) {
 		
 		if(jogador != null) {
 			jogadores.atualizaJogador(jogador);
 		}else {
-			System.out.println("O Jogador est√° vazio");
+			System.out.println("O Jogador est· vazio");
 		}
 	}
 	public void alteraClube(Clube clube) {
 		if(clube != null) {
 			clubes.atualizaClube(clube);
 		}else {
-			System.out.println("O clube est√° vazio");
+			System.out.println("O clube est· vazio");
 		}
 	}
 	public void exclueJogador(int numeroregistro) {
@@ -45,12 +46,12 @@ public class ControleGerenciador {
 			if(jogadores.buscaJogador(numeroregistro) != null) {
 				jogadores.removeJogador(numeroregistro); 
 			}else {
-				System.out.println("Erro, jogador n√£o existe!");
+				System.out.println("Erro, jogador n„o existe!");
 			}
 			
 		}
 	}
 	public void exclueCampionato() {
 		
-	}
+	}*/
 }

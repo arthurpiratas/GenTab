@@ -20,6 +20,25 @@ public class Clube {
 	private int prestigoTorcida;
 	
 	
+	public Clube(String nome, int numeroRegistro,
+			int pontosCampAtual, int golsProCampAtual, int golsContraCampAtual, int vitoriasCampAtual,
+			int empateCampAtual, int derrotaCampAtual, String nomeEstadio, int prestigoTorcida) {
+		super();
+		this.nome = nome;
+		this.numeroRegistro = numeroRegistro;
+		this.pontosCampAtual = pontosCampAtual;
+		this.golsProCampAtual = golsProCampAtual;
+		this.golsContraCampAtual = golsContraCampAtual;
+		this.vitoriasCampAtual = vitoriasCampAtual;
+		this.empateCampAtual = empateCampAtual;
+		this.derrotaCampAtual = derrotaCampAtual;
+		this.nomeEstadio = nomeEstadio;
+		this.prestigoTorcida = prestigoTorcida;
+		this.jogadores = new Jogadores[tamanhoJogador]; 
+	}
+
+	
+	
 	public Clube(String nome, int numeroRegistro, Jogadores[] jogadores, int contJogador, int idCampeonatoAtual,
 			int pontosCampAtual, int golsProCampAtual, int golsContraCampAtual, int vitoriasCampAtual,
 			int empateCampAtual, int derrotaCampAtual, String nomeEstadio, int prestigoTorcida) {
@@ -55,6 +74,7 @@ public class Clube {
 		this.derrotaCampAtual = derrotaCampAtual;
 		this.nomeEstadio = nomeEstadio;
 		this.prestigoTorcida = prestigoTorcida;
+		this.jogadores = new Jogadores[tamanhoJogador]; 
 	}
 	
 	

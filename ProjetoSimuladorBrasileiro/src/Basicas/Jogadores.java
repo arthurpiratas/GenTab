@@ -48,7 +48,7 @@ public class Jogadores {
 	}
 
 
-	Jogadores() {
+	public Jogadores() {
 		
 		this.nome = "";
 		this.idade = 0;
@@ -65,17 +65,28 @@ public class Jogadores {
 	}
 	
 	
-	Jogadores(String nome, int idade, int numeroRegistro, int idClube, int posicao, int habilidade, int numero,
+	public Jogadores(String nome, int idade, int numeroRegistro, int idClube, int posicao, int habilidade, int numero,
 			int gol, int posicaoAtual) {
 		this.nome = nome;
 		this.idade = idade;
 		this.numeroRegistro = numeroRegistro;
-		IdClube = idClube;
+		this.IdClube = idClube;
 		this.posicao = posicao;
 		this.habilidade = habilidade;
 		this.numero = numero;
 		this.gol = gol;
 		this.posicaoAtual = posicaoAtual; 
+	}
+	
+	public Jogadores(String nome, int idade, int numeroRegistro, int posicao, int habilidade, int numero,
+			int gol) {
+		this.nome = nome;
+		this.idade = idade;
+		this.numeroRegistro = numeroRegistro;
+		this.posicao = posicao;
+		this.habilidade = habilidade;
+		this.numero = numero;
+		this.gol = gol; 
 	}
 	
 	

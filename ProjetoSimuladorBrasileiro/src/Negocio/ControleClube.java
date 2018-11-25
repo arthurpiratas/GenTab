@@ -4,6 +4,7 @@ import Basicas.Jogadores;
 
 import Repositorio.RepositorioClube;
 import Repositorio.RepositorioClubeArray;
+import Repositorio.RepositorioJogadoresArray;
 
 
 public class ControleClube {
@@ -12,14 +13,11 @@ public class ControleClube {
 	
 	public void insereClube(Clube clube) {
 		if(clube != null) {
-			if(clube.getNome().equals(repositorio.buscaClube(clube.getNumeroRegistro()).getNome())) {
-				System.out.println("Nome de Clube já cadastrado!");
-			}else {
-				repositorio.inserirClube(clube);
-			}
-		}else {
-			System.out.println("O clube está vazio");
+			repositorio.inserirClube(clube);
+		}else { 
+			System.out.println("O Clube está vazio");
 		}
+		
 	}
 	
 	public void atualizaClube(Clube clube) {
@@ -66,9 +64,9 @@ public class ControleClube {
 		}
 	}
 	
-	public void incluiJogador(Jogadores jogador, Clube clube, ControleJogadores CrtJogadores) {
+	public void incluiJogador(Jogadores jogador, Clube clube, ControleJogadores ctrJogadores) {
 		
-		if(CrtJogadores.buscaJogador(jogador.getNumeroRegistro()) != null) {
+		if(ctrJogadores.buscaJogador(jogador.getNumeroRegistro()) != null) {
 			
 			if(verificaJogadorClube(jogador, clube.getNumeroRegistro()) == false) {
 				
@@ -88,9 +86,9 @@ public class ControleClube {
 		
 	}
 	
-	public void removeJogador(int numeroRegJogador, Clube clube, ControleJogadores CrtJogadores) {
+	public void removeJogador(int numeroRegJogador, Clube clube, ControleJogadores ctrJogadores) {
 		
-		if(CrtJogadores.buscaJogador(numeroRegJogador) != null) {
+		if(ctrJogadores.buscaJogador(numeroRegJogador) != null) {
 			
 			if(verificaJogadorClube(clube, numeroRegJogador)) {
 				

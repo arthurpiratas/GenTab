@@ -2,6 +2,7 @@ package Repositorio;
 
 import Basicas.Perfil;
 
+
 public class RepositorioPerfisArray implements RepositorioPerfis{
 	
 	private Perfil[] perfis;
@@ -12,7 +13,7 @@ public class RepositorioPerfisArray implements RepositorioPerfis{
 		this.perfis = new Perfil[TAMANHO];
 	}
 	@Override
-	public void inserir(Perfil perfil) { //insere na primeira possi√ß√£o n√£o nula
+	public void inserir(Perfil perfil) { //insere na primeira possiÁ„o n„o nula
 		for(int i=0;i<TAMANHO;i++) {
 			if(perfis[i] == null) {
 				perfis[i] = perfil;
@@ -32,7 +33,7 @@ public class RepositorioPerfisArray implements RepositorioPerfis{
 		}
 	}
 	@Override
-	public Perfil buscar(int id) { //procura o perfil pelo id e o retorna se achar-lo. retorna nulo caso contr√°rio.
+	public Perfil buscar(int id) { //procura o perfil pelo id e o retorna se achar-lo. retorna nulo caso contr·rio.
 		Perfil perf = null;
 		 for(int i=0;i<TAMANHO;i++) {
 				if(perfis[i] != null) {
@@ -54,7 +55,7 @@ public class RepositorioPerfisArray implements RepositorioPerfis{
 		}
 	}
 	@Override
-	public Perfil buscarLogin(String login) { //procura o perfil pelo login. Ser√° usado pelo Criar() para verificar se o login ja existe.
+	public Perfil buscarLogin(String login) { //procura o perfil pelo login. Ser· usado pelo Criar() para verificar se o login ja existe.
 		 for(int i=0;i<TAMANHO;i++) {
 				if(perfis[i] != null) {
 					if(perfis[i].getLogin().equals(login)) {
